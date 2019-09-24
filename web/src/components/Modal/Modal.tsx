@@ -5,7 +5,7 @@ import ModalImage, { ModalImageProps } from './ModalImage'
 
 interface ModalProps {
   open?: boolean
-  handleHide?: () => void
+  handleHide?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 interface IModal<T> extends React.FC<T> {
@@ -14,6 +14,13 @@ interface IModal<T> extends React.FC<T> {
 }
 
 const Modal: IModal<ModalProps> = (props) => {
+  const handleHide = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault()
+    if (props.handleHide) {
+      props.handleHide(e)
+    }
+  }
+
   return (
     <div
       className={`
@@ -21,7 +28,12 @@ const Modal: IModal<ModalProps> = (props) => {
           ${!props.open ? 'modal_closed' : ''}
           `}
     >
-      <div className='modal__window'>{props.children}</div>
+      <div className='modal__window'>
+        <button className='modal__exit-button' onClick={handleHide}>
+          x
+        </button>
+        {props.children}
+      </div>
       <div className='modal__overlay'></div>
     </div>
   )

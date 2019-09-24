@@ -12,18 +12,27 @@ const ProductBox: React.FC<ProductBoxProps> = (props) => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     setModalOpen(true)
+    console.log(modalOpen)
   }
 
-  const boxWidth = !props.size || props.size === 1 ? '300px' : '600px'
+  const handleModalHide = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
+    e.preventDefault()
+    setModalOpen(false)
+    console.log(modalOpen)
+  }
+
+  const boxWidth =
+    !props.size || props.size === 1 ? '300px !important' : '400px !important'
+
   return (
-    <div
-      className='product-grid__box'
-      style={{ width: boxWidth }}
-      onClick={handleClick}
-    >
-      <img className='product-grid__box__image' src={props.imgSrc} />
-      <div className='product-grid__box__overlay'>Shop now</div>
-      <Modal open={modalOpen}>
+    <div className='product-grid__box' style={{ maxWidth: boxWidth }}>
+      <div onClick={handleClick} className='product-grid__box__container'>
+        <img className='product-grid__box__image' src={props.imgSrc} />
+        <div className='product-grid__box__overlay'>Shop now</div>
+      </div>
+      <Modal open={modalOpen} handleHide={handleModalHide}>
         <Modal.Image src={props.imgSrc} />
         <Modal.Content></Modal.Content>
       </Modal>
