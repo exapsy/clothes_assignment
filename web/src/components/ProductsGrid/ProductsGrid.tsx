@@ -9,7 +9,6 @@ interface ProductGridProps {
 
 export interface Product {
   imgSrc: string
-  imgSize?: 1 | 2
 }
 
 const ProductsGrid: React.FC<ProductGridProps> = (props) => {
@@ -17,11 +16,7 @@ const ProductsGrid: React.FC<ProductGridProps> = (props) => {
     <ul className='product-grid'>
       {props.products
         ? props.products.map((product) => (
-            <ProductBox
-              imgSrc={product.imgSrc}
-              key={uuid.v4()}
-              size={product.imgSize}
-            />
+            <ProductBox imgSrc={product.imgSrc} key={uuid.v4()} />
           ))
         : null}
     </ul>

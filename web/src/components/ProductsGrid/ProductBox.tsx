@@ -3,7 +3,6 @@ import React from 'react'
 import { Modal } from '../Modal'
 
 interface ProductBoxProps {
-  size?: 1 | 2
   imgSrc: string
 }
 
@@ -21,13 +20,14 @@ const ProductBox: React.FC<ProductBoxProps> = (props) => {
     setModalOpen(false)
   }
 
-  const boxWidth =
-    !props.size || props.size === 1 ? '300px !important' : '400px !important'
-
   return (
-    <li className='product-grid__box' style={{ maxWidth: boxWidth }}>
+    <li className='product-grid__box'>
       <div onClick={handleClick} className='product-grid__box__container'>
-        <img className='product-grid__box__image' src={props.imgSrc} />
+        <img
+          className='product-grid__box__image'
+          src={props.imgSrc}
+          alt='Shop now'
+        />
         <div className='product-grid__box__overlay'>Shop now</div>
       </div>
       <Modal open={modalOpen} handleHide={handleModalHide}>
