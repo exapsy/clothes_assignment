@@ -1,31 +1,37 @@
+import './index.scss'
+
 import React from 'react'
 
 import { ProductsGrid } from '../../components/ProductsGrid'
 import { Product } from '../../components/ProductsGrid/ProductsGrid'
 
 const Landpage: React.FC = () => {
-  const createProduct = (imgSrc: string, imgSize: 1 | 2): Product => {
+  const createProduct = (imgSrc: string): Product => {
     return {
       imgSrc,
-      imgSize,
     }
   }
   const products: Product[] = [
     createProduct(
-      'https://staging-etonshirts.s3.amazonaws.com/media/catalog/product/cache/image/568x/fe048ded4c6db6c6afa45b749bc258ce/3/0/30367951129_3.jpg',
-      1,
+      'https://cdn.etonshirts.com/media/catalog/product/cache/small_image/400x/fe048ded4c6db6c6afa45b749bc258ce/1/0/10000039725_st.jpg',
     ),
     createProduct(
-      'https://zakcretcdn.r.worldssl.net/eshop/image/data/20190913/kids-500x200.jpg',
-      2,
+      'https://cdn.etonshirts.com/media/catalog/product/cache/small_image/400x/fe048ded4c6db6c6afa45b749bc258ce/1/0/10000008471_st.jpg',
     ),
     createProduct(
-      'https://staging-etonshirts.s3.amazonaws.com/media/catalog/product/cache/image/568x/fe048ded4c6db6c6afa45b749bc258ce/3/0/30336151167_3.jpg',
-      1,
+      'https://cdn.etonshirts.com/media/catalog/product/cache/small_image/400x/fe048ded4c6db6c6afa45b749bc258ce/1/0/10000008471_st.jpg',
     ),
     createProduct(
-      'https://staging-etonshirts.s3.amazonaws.com/media/catalog/product/cache/image/568x/fe048ded4c6db6c6afa45b749bc258ce/3/0/30000062500_3.jpg',
-      1,
+      'https://cdn.etonshirts.com/media/catalog/product/cache/small_image/400x/fe048ded4c6db6c6afa45b749bc258ce/1/0/10000008471_st.jpg',
+    ),
+    createProduct(
+      'https://cdn.etonshirts.com/media/shop_now/slim-fit-shirts-white-190911-cat.jpg',
+    ),
+    createProduct(
+      'https://cdn.etonshirts.com/dyn/media/catalog/product/9/8/98008458026_st/337x/soft_lightweight_denim_shirt.jpg',
+    ),
+    createProduct(
+      'https://cdn.etonshirts.com/media/catalog/product/cache/small_image/400x/fe048ded4c6db6c6afa45b749bc258ce/1/0/10000008471_st.jpg',
     ),
   ]
 

@@ -1,25 +1,21 @@
 .product-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  list-style: none;
   text-align: center;
 
   &__box {
-    display: flex;
-    flex: 1 0 100%;
-    flex-direction: column;
+    display: inline-block;
     justify-content: center;
     margin: 2px 4px 2px 4px;
     position: relative;
     text-align: center;
-
-    max-width: 500px;
     height: 300px;
 
     &:hover &__overlay {
       opacity: 1;
     }
+  }
+  &__box__container {
+    height: 100%;
   }
   &__box__image {
     max-width: 100%;

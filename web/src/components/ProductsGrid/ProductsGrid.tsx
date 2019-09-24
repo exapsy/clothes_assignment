@@ -14,7 +14,7 @@ export interface Product {
 
 const ProductsGrid: React.FC<ProductGridProps> = (props) => {
   return (
-    <div className='product-grid'>
+    <ul className='product-grid'>
       {props.products
         ? props.products.map((product) => (
             <ProductBox
@@ -24,7 +24,7 @@ const ProductsGrid: React.FC<ProductGridProps> = (props) => {
             />
           ))
         : null}
-    </div>
+    </ul>
   )
 }
 
