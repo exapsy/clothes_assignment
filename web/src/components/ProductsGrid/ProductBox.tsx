@@ -12,7 +12,6 @@ const ProductBox: React.FC<ProductBoxProps> = (props) => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     setModalOpen(true)
-    console.log(modalOpen)
   }
 
   const handleModalHide = (
@@ -20,7 +19,6 @@ const ProductBox: React.FC<ProductBoxProps> = (props) => {
   ) => {
     e.preventDefault()
     setModalOpen(false)
-    console.log(modalOpen)
   }
 
   const boxWidth =
