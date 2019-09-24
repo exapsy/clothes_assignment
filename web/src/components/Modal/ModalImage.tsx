@@ -5,7 +5,7 @@ export interface ModalImageProps {
 }
 
 const ModalImage: React.FC<ModalImageProps> = (props) => {
-  return <img className='modal__image' src={props.src} />
+  return <img className='modal__image' src={props.src} alt='productImage' />
 }
 
 export default ModalImage
