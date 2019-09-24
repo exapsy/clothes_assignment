@@ -1,6 +1,9 @@
 .product-grid {
   list-style: none;
   text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 
   &__box {
     display: inline-block;
@@ -8,18 +11,18 @@
     margin: 2px 4px 2px 4px;
     position: relative;
     text-align: center;
-    height: 300px;
 
     &:hover &__overlay {
       opacity: 1;
     }
   }
   &__box__container {
+    display: block;
     height: 100%;
   }
   &__box__image {
+    max-height: 300px;
     max-width: 100%;
-    max-height: 100%;
     height: auto;
   }
   &__box__overlay {
