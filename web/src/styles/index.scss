@@ -1,0 +1,10 @@
+// *** Settings ***
+@import './base/settings';
+@import './base/colors';
+
+// *** Base ***
+@import './base/core';
+
+// *** Components ***
+@import './components/productGrid.scss';
+@import './components/modal.scss';
