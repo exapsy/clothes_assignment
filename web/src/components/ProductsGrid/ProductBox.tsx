@@ -27,7 +27,7 @@ const ProductBox: React.FC<ProductBoxProps> = (props) => {
     !props.size || props.size === 1 ? '300px !important' : '400px !important'
 
   return (
-    <div className='product-grid__box' style={{ maxWidth: boxWidth }}>
+    <li className='product-grid__box' style={{ maxWidth: boxWidth }}>
       <div onClick={handleClick} className='product-grid__box__container'>
         <img className='product-grid__box__image' src={props.imgSrc} />
         <div className='product-grid__box__overlay'>Shop now</div>
@@ -36,7 +36,7 @@ const ProductBox: React.FC<ProductBoxProps> = (props) => {
         <Modal.Image src={props.imgSrc} />
         <Modal.Content></Modal.Content>
       </Modal>
-    </div>
+    </li>
   )
 }
 
