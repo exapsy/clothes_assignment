@@ -9,7 +9,7 @@ An assignment made for a job interview.
 #### Install docker
 
 ```bash
-wget https://raw.githubusercontent.com/ionian-uni-ieee/ieeesb-app/dev/scripts/install-docker.sh && sudo sh ./install-docker.sh
+wget https://raw.githubusercontent.com/exapsy/clothes_assignment/master/scripts/install-docker.sh && sudo sh ./install-docker.sh
 ```
 
 #### Run a container
